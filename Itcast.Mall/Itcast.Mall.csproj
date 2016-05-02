@@ -1018,6 +1018,20 @@
     <Folder Include="Content\" />
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Itcast.BLL\Itcast.Mall.BLL.csproj">
+      <Project>{8eca7ec2-fa0a-409a-a456-da9b288651f9}</Project>
+      <Name>Itcast.Mall.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itcast.Model\Itcast.Mall.Model.csproj">
+      <Project>{f71d270f-96cb-4dd4-879b-2241cc470790}</Project>
+      <Name>Itcast.Mall.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itcast.Utility\Itcast.Mall.Utility.csproj">
+      <Project>{cebb9283-f3a2-44cc-a69e-af6f2440a3ea}</Project>
+      <Name>Itcast.Mall.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
