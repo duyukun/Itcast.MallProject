@@ -1,0 +1,226 @@
+﻿
+@{
+    ViewBag.Title = "RegsterStep";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <!-- 内容部分开始 -->
+    <!-- 找回密码模块开始 -->
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+            <div class="forgot-title f20 tit-family">找回密码</div>
+            <div class="step-icon">
+                <i class="forgot-step icon-step-2 ilb"></i>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+    <!-- 步骤二 -->
+    <div class="row p30">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#email" data-toggle="tab">邮箱验证</a></li>
+                <li class=""><a href="#phone" data-toggle="tab">手机验证</a></li>
+                <li class=""><a href="#artificial" data-toggle="tab">人工审核</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content" style="border:1px solid #ddd;border-top:0">
+                <div class="tab-pane fade active in" id="email">
+                    <div class="p30 tc">
+                        <h5 class="f16 red-font fb">通过密保手机找回密码</h5>
+                        <!--<p>您没有填写密保邮箱或者密保邮箱未验证！</p>-->
+                        <div class="row p30">
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-4">
+                                <form role="form" class="f14">
+                                    <div class="form-group">
+                                        <label for="username">邮箱</label>
+                                        <input type="email" class="form-control" id="username" placeholder="邮箱">
+                                    </div>
+                                    <button type="submit" class="btn btn-danger btn-block f16">发送邮件</button>
+                                </form>
+                            </div>
+                            <div class="col-lg-4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="phone">
+                    <div class="p30 tc">
+                        <h5 class="f16 red-font fb">通过邮箱找回密码</h5>
+                        <!--<p>您没有填写密保邮箱或者密保邮箱未验证！</p>-->
+                        <div class="row p30">
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-4">
+                                <form role="form" class="f14">
+                                    <div class="form-group">
+                                        <label for="username">手机号</label>
+                                        <input type="text" class="form-control" id="username" placeholder="手机号">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="vcode">验证码</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="vcode" placeholder="验证码">
+                                            <span class="input-group-btn" style="padding: 0 2px; cursor: pointer">
+                                                <button type="button" class="btn btn-default">发送验证码</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-danger btn-block f16">下一步</button>
+                                </form>
+                            </div>
+                            <div class="col-lg-4"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="artificial">
+                    <div class="p30 tc">
+                        <h5 class="f16 red-font fb">联系客服</h5>
+                        <!--<p>您没有填写密保邮箱或者密保邮箱未验证！</p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
+    <!-- 找回密码模块结束 -->
+    <!-- 内容部分结束 -->
+    <div class="row mt20">
+        <div class="col-lg-12">
+            <ul class="listbar-5">
+                <li>
+                    <i class="icon-main icon-intr-1 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        正品保证<br>
+                        假1赔10
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-2 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        质优价廉<br>
+                        买贵就赔
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-3 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        7天保障<br>
+                        无理由退换
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-4 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        满100元<br>
+                        免运费
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-5 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        100优惠宝<br>
+                        =1元
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-6 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        24小时<br>
+                        闪电发货
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-7 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        7x24小时<br>
+                        在线客服
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-8 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        支持多种<br>
+                        支付方式
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-9 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        开箱验货<br>
+                        放心付款
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-10 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        晒单奖励<br>
+                        评论奖励
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row mt10">
+        <div class="col-lg-12 help-center">
+            <ul class="help-list">
+                <li>
+                    <ul class="help-on">
+                        <li class="ontitle"><i class="icon-main icon-help-1 pull-left"></i>关于我们</li>
+                        <li class="ontext"><a href="#">关于传智</a></li>
+                        <li class="ontext"><a href="#">联系我们</a></li>
+                        <li class="ontext"><a href="#">加入我们</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="help-on">
+                        <li class="ontitle"><i class="icon-main icon-help-2 pull-left"></i>购物指南</li>
+                        <li class="ontext"><a href="#">购物流程</a></li>
+                        <li class="ontext"><a href="#">服务协议</a></li>
+                        <li class="ontext"><a href="#">优惠券说明</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="help-on">
+                        <li class="ontitle"><i class="icon-main icon-help-3 pull-left"></i>支付方式</li>
+                        <li class="ontext"><a href="#">银联支付</a></li>
+                        <li class="ontext"><a href="#">快钱支付</a></li>
+                        <li class="ontext"><a href="#">支付宝支付</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="help-on">
+                        <li class="ontitle"><i class="icon-main icon-help-4 pull-left"></i>配送方式</li>
+                        <li class="ontext"><a href="#">运费说明</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="help-on">
+                        <li class="ontitle"><i class="icon-main icon-help-5 pull-left"></i>售后服务</li>
+                        <li class="ontext"><a href="#">退换货政策</a></li>
+                        <li class="ontext"><a href="#">退换货流程</a></li>
+                        <li class="ontext"><a href="#">退换货申请</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="help-on">
+                        <li class="ontitle"><i class="icon-main icon-help-6 pull-left"></i>帮助信息</li>
+                        <li class="ontext"><a href="#">常见问题</a></li>
+                        <li class="ontext"><a href="#">投诉建议</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+@section javascript{
+    <script type="text/javascript">
+        $('#vcode_img').click(function () {
+            $(this).attr('src', $(this).data('src') + '?' + Math.random());
+        });
+    </script>
+}
+

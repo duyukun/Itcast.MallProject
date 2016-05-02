@@ -1,0 +1,261 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <!-- 内容部分开始 -->
+
+
+
+    <div class="row">
+        <h3 class="member-tit f16 fb tit-family">我的传智</h3>
+    </div>
+    <div class="row">
+        <!-- 左边栏 -->
+        <div id="sidebar" class="col-lg-2">
+            <div class="widget mb10">
+                <div class="panel-group" id="accordion">
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h5 class="fb pl10">
+                                <i class="pull-right m10 icon-main icon-up"></i><a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapse-1">相关分类</a>
+                            </h5>
+                        </div>
+                        <div id="collapse-1" class="panel-collapse collapse in">
+                            <div class="meb-left-list">
+                                <ul>
+                                    <li><a href="">我的订单</a></li>
+                                    <li><a href="">我的购物车</a></li>
+                                    <li><a href="">我的评价</a></li>
+                                    <li><a href="">我的晒单</a></li>
+                                    <li><a href="">我的关注</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h5 class="fb pl10">
+                                <i class="pull-right m10 icon-main icon-down"></i><a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapse-2">账户中心</a>
+                            </h5>
+                        </div>
+                        <div id="collapse-2" class="panel-collapse collapse in">
+                            <div class="meb-left-list">
+                                <ul>
+                                    <li><a href="">编辑个人信息</a></li>
+                                    <li><a href="">修改密码</a></li>
+                                    <li><a href="">地址簿管理</a></li>
+                                    <li><a href="">我的积分</a></li>
+                                    <li><a href="">我的优惠宝</a></li>
+                                    <li><a href="">我的优惠券</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-title">
+                            <h5 class="fb pl10">
+                                <i class="pull-right m10 icon-main icon-down"></i><a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapse-3">客户服务</a>
+                            </h5>
+                        </div>
+                        <div id="collapse-3" class="panel-collapse collapse in">
+                            <div class="meb-left-list">
+                                <ul>
+                                    <li><a href="">退换货申请</a></li>
+                                    <li><a href="">投诉反馈</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 内容部分开始 -->
+        <div id="content" class="col-lg-10">
+            <div class="meb-content">
+                <div class="meb-avatar pull-left">
+                    <img alt="" src="../../assrts/img/admin.png" />
+                </div>
+                <div class="meb-infor pull-right">
+                    <div class="meb-infor-title mb10"><b class="orange-font f14">商城测试号</b>&nbsp;&nbsp;欢迎您!</div>
+                    <div class="account-security mb10">
+                        账户安全：<b class="orange-font">中级</b> <i class="icon-main icon-security-4"></i>
+                        <i class="icon-main icon-phone-bright"></i>手机已验证
+                        <i class="icon-main icon-email-bright"></i>邮箱已验证
+                        <i class="icon-main icon-regular-bright"></i>正常
+                    </div>
+                    <div class="information">
+                        <ul>
+                            <li class="information-tit">优惠宝：</li>
+                            <li class="information-show"><span class="pull-right"><a href="">什么是优惠宝？</a></span><a href="">1000(=10元)</a></li>
+                            <li class="information-tit">已完成：</li>
+                            <li class="information-show"><a href="">全部订单(5)</a></li>
+                            <li class="information-tit">待处理：</li>
+                            <li class="information-show">
+                                <a href="">待付款(4)</a> &nbsp;
+                                <a href="">待发货(0)</a> &nbsp;
+                                <a href="">待收货(0)</a> &nbsp;
+                                <a href="">待评价(0)</a> &nbsp;
+                                <a href="">待晒单(0)</a>
+                            </li>
+                            <li class="information-tit">总积分：</li>
+                            <li class="information-show"><span class="pull-right"><a href="">积分规则</a></span><a href="">0</a></li>
+                            <li class="information-tit last-li">会员等级：</li>
+                            <li class="information-show last-li">
+                                <span class="pull-right">
+                                    亲！您今天还没有签到哦！签到可获得<b class="red-font f14">10</b>优惠宝
+                                    <button type="button" class="btn btn-warning btn-xs">我要签到</button>
+                                </span>
+                                <a href="">49</a>&nbsp;<i class="icon-main icon-level-1"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 内容部分结束 -->
+    <div class="row mt20">
+        <div class="col-lg-12">
+            <ul class="listbar-5">
+                <li>
+                    <i class="icon-main icon-intr-1 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        正品保证<br>
+                        假1赔10
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-2 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        质优价廉<br>
+                        买贵就赔
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-3 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        7天保障<br>
+                        无理由退换
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-4 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        满100元<br>
+                        免运费
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-5 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        100优惠宝<br>
+                        =1元
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-6 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        24小时<br>
+                        闪电发货
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-7 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        7x24小时<br>
+                        在线客服
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-8 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        支持多种<br>
+                        支付方式
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-9 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        开箱验货<br>
+                        放心付款
+                    </p>
+                </li>
+                <li>
+                    <i class="icon-main icon-intr-10 ilb ml31"></i>
+                    <p class="tc gray-font">
+                        晒单奖励<br>
+                        评论奖励
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row mt10">
+        <div class="col-lg-12 help-center">
+            <ul class="help-list">
+                <li>
+                    <ul class="help-on">
+                        <li class="ontitle"><i class="icon-main icon-help-1 pull-left"></i>关于我们</li>
+                        <li class="ontext"><a href="#">关于传智</a></li>
+                        <li class="ontext"><a href="#">联系我们</a></li>
+                        <li class="ontext"><a href="#">加入我们</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="help-on">
+                        <li class="ontitle"><i class="icon-main icon-help-2 pull-left"></i>购物指南</li>
+                        <li class="ontext"><a href="#">购物流程</a></li>
+                        <li class="ontext"><a href="#">服务协议</a></li>
+                        <li class="ontext"><a href="#">优惠券说明</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="help-on">
+                        <li class="ontitle"><i class="icon-main icon-help-3 pull-left"></i>支付方式</li>
+                        <li class="ontext"><a href="#">银联支付</a></li>
+                        <li class="ontext"><a href="#">快钱支付</a></li>
+                        <li class="ontext"><a href="#">支付宝支付</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="help-on">
+                        <li class="ontitle"><i class="icon-main icon-help-4 pull-left"></i>配送方式</li>
+                        <li class="ontext"><a href="#">运费说明</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="help-on">
+                        <li class="ontitle"><i class="icon-main icon-help-5 pull-left"></i>售后服务</li>
+                        <li class="ontext"><a href="#">退换货政策</a></li>
+                        <li class="ontext"><a href="#">退换货流程</a></li>
+                        <li class="ontext"><a href="#">退换货申请</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="help-on">
+                        <li class="ontitle"><i class="icon-main icon-help-6 pull-left"></i>帮助信息</li>
+                        <li class="ontext"><a href="#">常见问题</a></li>
+                        <li class="ontext"><a href="#">投诉建议</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+@section javascript{
+    <script type="text/javascript">
+        $('#vcode_img').click(function () {
+            $(this).attr('src', $(this).data('src') + '?' + Math.random());
+        });
+    </script>
+}
+
+
