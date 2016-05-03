@@ -17,46 +17,46 @@
             <!-- 注册表单开始 -->
             @using (Ajax.BeginForm("CreateRegister", new AjaxOptions()
             {
-                OnSuccess = "OnSuccess",
+                OnSuccess = "onSuccess",
                 OnFailure = "OnFailure",
-                HttpMethod="POST",
-                OnBegin="OnBegin",
+                OnBegin = "OnBegin",
             }))
             {
-                <form role="form" class="login-form f14">
-                    <div class="form-group">
-                        <label for="username">邮箱/用户名/已验证手机</label>
-                        @Html.TextBoxFor(p=>p.Login,new { @class= "form-control", @placeholder= "邮箱/用户名/已验证手机" })
-                        @*<input type="text" class="form-control" id="username" placeholder="邮箱/用户名/已验证手机">*@
-                    </div>
-                    <div class="form-group">
-                        <label for="password">密码</label>
-                        @Html.PasswordFor(p => p.Password,new {@class="form-control", @placeholder = "密码" })
-                        @*<input type="password" class="form-control" id="password" placeholder="密码">*@
-                    </div>
-                    <div class="form-group">
-                        <label for="confirm">确认密码</label>
-                        @Html.Password("txt_ConfimPasswd", "", new { @class = "form-control", @placeholder = "确认密码" })
-                        @*<input type="password" class="form-control" id="confirm" placeholder="确认密码">*@
-                    </div>
-                    <div class="form-group">
-                        <label for="vcode">验证码</label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="vcode" placeholder="验证码">
-                            <span class="input-group-addon" style="padding:0 2px;cursor:pointer">
+                <div id="group_info" class="form-group" style="display:none;">
 
-                                <img id="vcode_img" src="@Url.Action("GetCaptch","CaptchaHelper")" data-src="/handler/verify.ashx" width="100" height="32" alt="验证码" title="点击切换验证码">
-                            </span>
-                        </div>
+                </div>
+                <div class="form-group">
+                    <label for="username">邮箱/用户名/已验证手机</label>
+                    @Html.TextBoxFor(p => p.Login, new { @class = "form-control", @placeholder = "请输入邮箱或手机号" })
+                    @*<input type="text" class="form-control" id="username" placeholder="邮箱/用户名/已验证手机">*@
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    @Html.PasswordFor(p => p.Password, new { @class = "form-control", @placeholder = "密码" })
+                    @*<input type="password" class="form-control" id="password" placeholder="密码">*@
+                </div>
+                <div class="form-group">
+                    <label for="confirm">确认密码</label>
+                    @Html.Password("txt_ConfimPasswd", "", new { @class = "form-control", @placeholder = "确认密码" })
+                    @*<input type="password" class="form-control" id="confirm" placeholder="确认密码">*@
+                </div>
+                <div class="form-group">
+                    <label for="vcode">验证码</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="vcode" placeholder="验证码">
+                        <span class="input-group-addon" style="padding:0 2px;cursor:pointer">
+
+                            <img id="vcode_img" src="@Url.Action("GetCaptch","CaptchaHelper")" data-src="@Url.Action("GetCaptch","CaptchaHelper")" width="100" height="32" alt="验证码" title="点击切换验证码">
+                        </span>
                     </div>
-                    <div class="checkbox f12">
-                        <label>
-                            <input type="checkbox">
-                            我已阅读并同意 &nbsp;<span class="blue-font"><a href="">《传智用户注册协议》</a></span>
-                        </label>
-                    </div>
-                    <button type="submit" class="btn btn-danger btn-block f16">立即注册</button>
-                </form>
+                </div>
+                <div class="checkbox f12">
+                    <label>
+                        <input type="checkbox" id="chk_ok">
+                        我已阅读并同意 &nbsp;<span class="blue-font"><a href="">《传智用户注册协议》</a></span>
+                    </label>
+                </div>
+                <button class="btn btn-danger btn-block f16">立即注册</button>
             }
             <!-- 注册表单结束 -->
         </div>
@@ -192,11 +192,52 @@
     </div>
 </div>
 @section javascript{
+    <script src="~/scripts/jquery.form.js"></script>
+    <script src="~/scripts/jquery.validate.min.js"></script>
+    <script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/scripts/jquery.unobtrusive-ajax.min.js"></script>
     <script type="text/javascript">
         $('#vcode_img').click(function () {
             $(this).attr('src', $(this).data('src') + '?' + Math.random());
         });
+
+        function OnFailure(result) {
+            alertTo("group_info", result, "danger");
+            return false;
+        }
+
+        function onSuccess(result) {
+            console.log(result);
+        }
+
+        function OnBegin() {
+            if (!$("#Login").AccountPhoneEmail()) {
+                alertTo("group_info", "请输入正确的邮箱或手机号", "danger");
+                return false;
+            }
+            if (!$("#Password").IsNull()) {
+                alertTo("group_info", "请输入密码！", "danger");
+                return false;
+            }
+            if (!$("#txt_ConfimPasswd").IsNull()) {
+                alertTo("group_info", "请输入确认密码！", "danger");
+                return false;
+            }
+            if (!$("#txt_ConfimPasswd").IsConfimPwd("#Password")) {
+                alertTo("group_info", "两次输入密码不一致！", "danger");
+                return false;
+            }
+            if (!$("#vcode").IsNull()) {
+                alertTo("group_info", "请输入验证码！", "danger");
+                return false;
+            }
+            if (!$("#chk_ok").IsChecked()) {
+                alertTo("group_info", "请勾选注册协议！", "danger");
+                return false;
+            }
+        }
     </script>
+
 }
 
 

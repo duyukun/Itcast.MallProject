@@ -11,7 +11,7 @@ namespace Itcast.Mall.Controllers
         // GET: CaptchaHelper
         public void GetCaptch()
         {
-            var captch = CaptchaHelper.DrawImage(CaptchaHelper.CreateRandomCode(4));
+            var captch = CaptchaHelper.DrawImage(CaptchaHelper.CreateRandomCode(4),20,background:System.Drawing.Color.White);
             Response.AddHeader("Content-Type", "img/jpeg");
             Response.BinaryWrite(captch);
             Response.End();

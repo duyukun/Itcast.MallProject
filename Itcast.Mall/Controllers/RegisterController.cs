@@ -24,5 +24,21 @@ namespace Itcast.Mall.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult CreateRegister(Register model)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                return Json(ex.Message);
+            }
+            throw new Exception("请输入正确的验证码！");
+           
+            //return Json(model);
+        }
     }
 }
